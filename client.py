@@ -6,12 +6,15 @@
    * Title - Create a multi user chat application using socket and mysql DB.
 """
 
-
+import os
 import socket
 from threading import Thread
 import mysql.connector
 # Connect to the database using root and password
-mydb = mysql.connector.connect(host="localhost", user="root",port='3306', passwd="Tekam@1234", database="akkidb")
+var=os.environ.get('DB_USER')
+var1=os.environ.get('DB_PASS')
+
+mydb = mysql.connector.connect(host="localhost", user=var,port='3306', passwd=var1, database="akkidb")
 mycursor = mydb.cursor()
 
 name = input("Enter your name:")
