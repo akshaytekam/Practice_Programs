@@ -5,6 +5,7 @@
    * package - socket, mysql-connector and threading
    * Title - Create a multi user chat application using socket and mysql DB.
 """
+
 import socket
 from time import *
 from threading import Thread
